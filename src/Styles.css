@@ -10,7 +10,7 @@
     background-image: url("../public/sprites/image.png");
     background-repeat: no-repeat;
     background-size: auto clamp(256px, 16vw, 16vw);
-    background-position: center calc(clamp(64px, 4vw, 4vw) + clamp(1vw, 16px, 100%) * 2);
+    background-position: center calc(clamp(48px, 3vw, 3vw) + clamp(1vw, 16px, 100%) * 2);
 }
 
 h1 {
@@ -18,15 +18,15 @@ h1 {
     margin: clamp(1vw, 16px, 100%) 0px;
     text-align: center;
     font-size: clamp(32px, 2vw, 2vw);
-    line-height: clamp(64px, 4vw, 4vw);
+    line-height: clamp(48px, 3vw, 3vw);
     width: 100vw;
-    height: clamp(64px, 4vw, 4vw);
+    height: clamp(48px, 3vw, 3vw);
 }
 
 #knightsweeper {
     background-image: url("../public/sprites/Logo.png");
     background-repeat: no-repeat;
-    background-size: auto clamp(64px, 4vw, 4vw);
+    background-size: auto clamp(48px, 3vw, 3vw);
     background-position: center center;
 }
 

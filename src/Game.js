@@ -215,6 +215,10 @@ export default function Game({ onBack }) {
         e.currentTarget.blur()
     }
 
+    const ToggleHide = () => {
+        setHide(hide ? false : true);
+    }
+
     const BackgroundColor = () => {
         return `rgba(${135 - 10 * currentLevel}, ${206 - 10 * currentLevel}, ${235 - 10 * currentLevel}, 1)`;
     }
@@ -469,18 +473,10 @@ export default function Game({ onBack }) {
                     ToggleIndicator();
                     break;
                 case 'Shift':
-                    setHide(true);
+                    ToggleHide();
                     break;
                 case ' ':
                     CenterCamera();
-                    break;
-                default:
-                    break;
-            }
-        }} onKeyUp={(e) => {
-            switch (e.key) {
-                case 'Shift':
-                    setHide(false);
                     break;
                 default:
                     break;
@@ -512,7 +508,7 @@ export default function Game({ onBack }) {
             justifyItems: 'center',
             alignItems: 'center',
             backgroundColor: 'rgba(63, 63, 63, 1)',
-            margin: `0px 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(${isMobile ? 384 : 512}px, ${isMobile ? 24 : 32}px, ${isMobile ? 24 : 32}px))), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(${isMobile ? 384 : 512}px, ${isMobile ? 24 : 32}px, ${isMobile ? 24 : 32}px)))) 0px`,
+            margin: `0px 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(48px, 3vw, 3vw) + clamp(2vw, 32px, 100%) + clamp(${isMobile ? 384 : 512}px, ${isMobile ? 24 : 32}px, ${isMobile ? 24 : 32}px))), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(48px, 3vw, 3vw) + clamp(2vw, 32px, 100%) + clamp(${isMobile ? 384 : 512}px, ${isMobile ? 24 : 32}px, ${isMobile ? 24 : 32}px)))) 0px`,
             width: `clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%)`,
             height: `clamp(${isMobile ? 384 : 512}px, ${isMobile ? 24 : 32}px, ${isMobile ? 24 : 32}px)`
         }}>
