@@ -31,8 +31,8 @@ body {
 
 .stats {
     display: grid;
-    grid-template-columns: calc(clamp(32vw, 512px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) calc(clamp(32vw, 512px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) clamp(2vw, 32px, 100%) clamp(3vw, 48px, 100%) clamp(2vw, 32px, 100%) clamp(3vw, 48px, 100%);
-    width: clamp(32vw, 512px, 100%);
+    grid-template-columns: calc(clamp(24vw, 384px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) calc(clamp(24vw, 384px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) clamp(2vw, 32px, 100%) clamp(3vw, 48px, 100%) clamp(2vw, 32px, 100%) clamp(3vw, 48px, 100%);
+    width: clamp(24vw, 384px, 100%);
     height: clamp(2vw, 32px, 100%);
 }
 
@@ -57,9 +57,9 @@ body {
     justify-items: center;
     align-items: center;
     background-color: rgba(63, 63, 63, 1);
-    margin: 0px 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(512px, 32vw, 32vw))), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(512px, 32vw, 32vw)))) 0px;
-    width: clamp(32vw, 512px, 100%);
-    height: clamp(512px, 32vw, 32vw);
+    margin: 0px 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(384px, 24vw, 24vw))), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(384px, 24vw, 24vw)))) 0px;
+    width: clamp(24vw, 384px, 100%);
+    height: clamp(384px, 24vw, 24vw);
 }
 
 .zoomin-button {

@@ -33,8 +33,8 @@ h1 {
 .button-group {
     flex-shrink: 0;
     display: grid;
-    width: clamp(28vw, 448px, 100%);
-    margin: calc(clamp(256px, 16vw, 16vw) + clamp(16px, 1vw, 100%)) 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + calc(clamp(256px, 16vw, 16vw) + clamp(1vw, 16px, 100%)) + clamp(1vw, 16px, 100%) * 6 + clamp(64px, 4vw, 4vw) * 3)), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + calc(clamp(256px, 16vw, 16vw) + clamp(1vw, 16px, 100%)) + clamp(1vw, 16px, 100%) * 6 + clamp(64px, 4vw, 4vw) * 3))) 0px;
+    width: clamp(20vw, 362px, 100%);
+    margin: calc(clamp(256px, 16vw, 16vw) + clamp(16px, 1vw, 100%)) 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(48px, 3vw, 3vw) + calc(clamp(256px, 16vw, 16vw) + clamp(1vw, 16px, 100%)) + clamp(1vw, 16px, 100%) * 6 + clamp(48px, 3vw, 3vw) * 3)), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(48px, 3vw, 3vw) + calc(clamp(256px, 16vw, 16vw) + clamp(1vw, 16px, 100%)) + clamp(1vw, 16px, 100%) * 6 + clamp(48px, 3vw, 3vw) * 3))) 0px;
 }
 
 .menu-button {
@@ -42,8 +42,8 @@ h1 {
     text-align: center;
     font-size: clamp(16px, 1vw, 1vw);
     line-height: clamp(32px, 2vw, 2vw);
-    width: clamp(28vw, 448px, 100%);
-    height: clamp(64px, 4vw, 4vw);
+    width: clamp(20vw, 362px, 100%);
+    height: clamp(48px, 3vw, 3vw);
     border: none;
     padding: 0;
     background: none;
