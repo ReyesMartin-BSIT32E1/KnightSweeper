@@ -288,6 +288,7 @@ export default function Game({ onBack }) {
             const context = canvas.getContext('2d');
             canvas.width = image.width;
             canvas.height = image.height;
+            context.imageSmoothingEnabled = false;
             context.drawImage(image, 0, 0);
             const updatedBoard = Array.from({ length: boardSize }, () => Array.from({ length: boardSize }, () => ({ isMine: false, isCleared: false, isFlagged: false, number: "" })));
             for (let y = 0; y < boardSize; y++) {
@@ -570,8 +571,8 @@ export default function Game({ onBack }) {
             <div></div>
             <div></div>
             <div></div>
-            <button className="key" onMouseDown={() => CenterCamera()}>●</button>
             <div></div>
+            <button className="key" onMouseDown={() => CenterCamera()}>●</button>
             <div></div>
             <div></div>
             <div></div>
