@@ -18,6 +18,7 @@ export default function Game({ onBack }) {
     const [indicator, setIndicator] = useState(false)
     const[moveCounter, setMoveCounter] = useState(0);
 
+    var page = document.getElementById("page");
     var temporaryScreen = document.getElementById("temporary-screen");
 
     window.onclick = function(event) {
@@ -207,12 +208,14 @@ export default function Game({ onBack }) {
                 setZoom(zoom === 1 ? zoom : zoom - 1);
                 break;
         }
-        e.currentTarget.blur()
+        e.currentTarget.blur();
+        page.currentTarget.focus();
     }
 
     const ToggleIndicator = (e) => {
         setIndicator(indicator ? false : true);
         e.currentTarget.blur()
+        page.currentTarget.focus();
     }
 
     const ToggleHide = () => {
@@ -449,7 +452,7 @@ export default function Game({ onBack }) {
     }, [player.deployed]);
 
     return (
-        <div className="page" tabIndex="0" onKeyDown={(e) => {
+        <div className="page" id='page' tabIndex="0" onKeyDown={(e) => {
             switch (e.key) {
                 case 'w': case 'W':
                     PlayerMovement('up');
