@@ -1,0 +1,86 @@
+.menu-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    background-color: skyblue;
+}
+
+#title-page {
+    background-image: url("../public/sprites/image.png");
+    background-repeat: no-repeat;
+    background-size: auto clamp(256px, 16vw, 16vw);
+    background-position: center calc(clamp(64px, 4vw, 4vw) + clamp(1vw, 16px, 100%) * 2);
+}
+
+h1 {
+    flex-shrink: 0;
+    margin: clamp(1vw, 16px, 100%) 0px;
+    text-align: center;
+    font-size: clamp(32px, 2vw, 2vw);
+    line-height: clamp(64px, 4vw, 4vw);
+    width: 100vw;
+    height: clamp(64px, 4vw, 4vw);
+}
+
+#knightsweeper {
+    background-image: url("../public/sprites/Logo.png");
+    background-repeat: no-repeat;
+    background-size: auto clamp(64px, 4vw, 4vw);
+    background-position: center center;
+}
+
+.button-group {
+    flex-shrink: 0;
+    display: grid;
+    width: clamp(28vw, 448px, 100%);
+    margin: calc(clamp(256px, 16vw, 16vw) + clamp(16px, 1vw, 100%)) 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + calc(clamp(256px, 16vw, 16vw) + clamp(1vw, 16px, 100%)) + clamp(1vw, 16px, 100%) * 6 + clamp(64px, 4vw, 4vw) * 3)), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + calc(clamp(256px, 16vw, 16vw) + clamp(1vw, 16px, 100%)) + clamp(1vw, 16px, 100%) * 6 + clamp(64px, 4vw, 4vw) * 3))) 0px;
+}
+
+.menu-button {
+    margin: clamp(1vw, 16px, 100%) 0px;
+    text-align: center;
+    font-size: clamp(16px, 1vw, 1vw);
+    line-height: clamp(32px, 2vw, 2vw);
+    width: clamp(28vw, 448px, 100%);
+    height: clamp(64px, 4vw, 4vw);
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+#play {
+    background-image: url("../public/sprites/Play.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+}
+
+#instructions {
+    background-image: url("../public/sprites/instructions.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+}
+
+#credits {
+    background-image: url("../public/sprites/Credits.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+}
+
+.back-button {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255, 0.5);
+    width: clamp(2vw, 32px, 100%);
+    height: clamp(2vw, 32px, 100%);
+    margin: 20px;
+    padding: 0;
+    border: 1px solid black;
+    cursor: pointer;
+}
