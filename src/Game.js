@@ -496,7 +496,7 @@ export default function Game({ onBack }) {
         <h1 id='knightsweeper'></h1>
         <div className='stats' style={{
             display: 'grid',
-            gridTemplateColumns: `calc(clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) + calc(clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) + clamp(2vw, 32px, 100%) + clamp(3vw, 48px, 100%) + clamp(2vw, 32px, 100%) + clamp(3vw, 48px, 100%)`,
+            gridTemplateColumns: `calc(clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) calc(clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) clamp(2vw, 32px, 100%) clamp(3vw, 48px, 100%) clamp(2vw, 32px, 100%) clamp(3vw, 48px, 100%)`,
             width: `clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%)`,
             height: 'clamp(2vw, 32px, 100%)'
         }}>
