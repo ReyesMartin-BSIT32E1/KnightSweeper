@@ -317,7 +317,7 @@ export default function Game({ onBack }) {
     
     const LoadLevel = (level) => {
         const image = new Image();
-        image.src = `/levels/level${level}.png`
+        image.src = `./levels/level${level}.png`
         image.onload = () => {
             DrawBoard(image);
         }
@@ -493,9 +493,9 @@ export default function Game({ onBack }) {
         <div className='stats'>
             <div className='stat-text'>Level: {currentLevel}</div>
             <div className='stat-text'>Moves: {moveCounter}</div>
-            <img src='/sprites/tileUncleared.png' className='stat-icon'/>
+            <img src='./sprites/tileUncleared.png' className='stat-icon'/>
             <div className='stat-text'>: {CheckUncleared()}</div>
-            <img src='/sprites/bomb.png' className='stat-icon'/>
+            <img src='./sprites/bomb.png' className='stat-icon'/>
             <div className='stat-text'>: {CheckUnflagged()}</div>
         </div>
         <ScrollContainer className="box" innerRef={container}>
