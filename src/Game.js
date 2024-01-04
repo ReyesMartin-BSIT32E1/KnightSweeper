@@ -2,6 +2,7 @@ import './Game.css'
 import './Styles.css'
 import React, { useRef, useState, useEffect} from 'react';
 import ScrollContainer from 'react-indiana-drag-scroll'
+import {MobileView} from 'react-device-detect';
 
 export default function Game({ onBack }) {
     const [board, setBoard] = useState(() => Array.from({ length: 1 }, () => Array.from({ length: 1 }, () => ({isMine: false, isCleared: false, isFlagged: false, isExit: false, number: ""}))));
@@ -555,6 +556,7 @@ export default function Game({ onBack }) {
         <button className='zoomin-button' onClick={() => ChangeZoom('plus')}>+</button>
         <button className='zoomout-button' onClick={() => ChangeZoom('minus')}>-</button>
         <button className='indicator-button' onClick={() => ToggleIndicator()}>👁</button>
+        <MobileView>
         <div className="keypad-left">
             <div></div>
             <button className="key" onClick={() => PlayerMovement('up')}>▲</button>
@@ -577,6 +579,7 @@ export default function Game({ onBack }) {
             <div></div>
             <div></div>
         </div>
+        </MobileView>
         </div>
     );
 }

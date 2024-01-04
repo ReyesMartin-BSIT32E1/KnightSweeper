@@ -104,49 +104,43 @@ body {
     cursor: pointer;
 }
 
-.keypad-left .key, .keypad-right {
-    display: none;
+.keypad-left {
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    display: grid !important;
+    width: clamp(18vw, 192px, 100%);
+    height: clamp(18vw, 192px, 100%);
+    grid-template-columns: repeat(3, clamp(4vw, 64px, 69px));
+    grid-template-rows: repeat(3, clamp(4vw, 64px, 69px));
+    pointer-events: none;
+    margin: 20px 20px ;
 }
 
-@media (max-width: 768px) {
-    .keypad-left {
-        position: fixed;
-        bottom: 0;
-        left: 0; 
-        display: grid !important;
-        width: clamp(18vw, 192px, 100%);
-        height: clamp(18vw, 192px, 100%);
-        grid-template-columns: repeat(3, clamp(4vw, 64px, 69px));
-        grid-template-rows: repeat(3, clamp(4vw, 64px, 69px));
-        pointer-events: none;
-        margin: 20px 20px ;
-    }
+.keypad-right {
+    position: fixed;
+    bottom: 0;
+    right: 0; 
+    display: grid !important;
+    width: clamp(18vw, 192px, 100%);
+    height: clamp(18vw, 192px, 100%);
+    grid-template-columns: repeat(3, clamp(4vw, 64px, 69px));
+    grid-template-rows: repeat(3, clamp(4vw, 64px, 69px));
+    pointer-events: none;
+    margin: 20px 20px ;
+}
 
-    .keypad-right {
-        position: fixed;
-        bottom: 0;
-        right: 0; 
-        display: grid !important;
-        width: clamp(18vw, 192px, 100%);
-        height: clamp(18vw, 192px, 100%);
-        grid-template-columns: repeat(3, clamp(4vw, 64px, 69px));
-        grid-template-rows: repeat(3, clamp(4vw, 64px, 69px));
-        pointer-events: none;
-        margin: 20px 20px ;
-    }
-    
-    .key {
-        display: block !important;
-        padding: 0;
-        box-sizing: border-box;
-        width: clamp(4vw, 64px, 100%);
-        height: clamp(4vw, 64px, 100%);
-        background-color: rgb(255, 255, 255, 0.5);
-        color: black;
-        text-align: center;
-        line-height: max(4vw, 64px);
-        font-size: large;
-        border: 1px solid black;
-        pointer-events: auto;
-    }
+.key {
+    display: block !important;
+    padding: 0;
+    box-sizing: border-box;
+    width: clamp(4vw, 64px, 100%);
+    height: clamp(4vw, 64px, 100%);
+    background-color: rgb(255, 255, 255, 0.5);
+    color: black;
+    text-align: center;
+    line-height: max(4vw, 64px);
+    font-size: large;
+    border: 1px solid black;
+    pointer-events: auto;
 }
