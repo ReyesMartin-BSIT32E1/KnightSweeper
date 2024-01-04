@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/KnightSweeper/static/css/main.573b5dcb.css",
-    "main.js": "/KnightSweeper/static/js/main.f7ac965a.js",
+    "main.css": "/KnightSweeper/static/css/main.26bbfed1.css",
+    "main.js": "/KnightSweeper/static/js/main.d169b87a.js",
     "static/media/Play.png": "/KnightSweeper/static/media/Play.398d6fd820ba5638e42b.png",
     "static/media/Credits.png": "/KnightSweeper/static/media/Credits.b90b56023a75eb20b76b.png",
     "static/media/instructions.png": "/KnightSweeper/static/media/instructions.7f01a716dafe05cb0eed.png",
     "static/media/image.png": "/KnightSweeper/static/media/image.8ef12c0b5434583b1e48.png",
     "static/media/Logo.png": "/KnightSweeper/static/media/Logo.e0ddd1c2dbbc1ee4d050.png",
     "index.html": "/KnightSweeper/index.html",
-    "main.573b5dcb.css.map": "/KnightSweeper/static/css/main.573b5dcb.css.map",
-    "main.f7ac965a.js.map": "/KnightSweeper/static/js/main.f7ac965a.js.map"
+    "main.26bbfed1.css.map": "/KnightSweeper/static/css/main.26bbfed1.css.map",
+    "main.d169b87a.js.map": "/KnightSweeper/static/js/main.d169b87a.js.map"
   },
   "entrypoints": [
-    "static/css/main.573b5dcb.css",
-    "static/js/main.f7ac965a.js"
+    "static/css/main.26bbfed1.css",
+    "static/js/main.d169b87a.js"
   ]
 }
