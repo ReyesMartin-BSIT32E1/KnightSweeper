@@ -29,13 +29,6 @@ body {
     background-color: rgba(0,0,0,0.4); 
 }
 
-.stats {
-    display: grid;
-    grid-template-columns: calc(clamp(24vw, 384px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) calc(clamp(24vw, 384px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) clamp(2vw, 32px, 100%) clamp(3vw, 48px, 100%) clamp(2vw, 32px, 100%) clamp(3vw, 48px, 100%);
-    width: clamp(24vw, 384px, 100%);
-    height: clamp(2vw, 32px, 100%);
-}
-
 .stat-text {
     width: calc(100% - calc(clamp(0.25vw, 4px, 100%)*2));
     height: calc(100% - calc(clamp(0.25vw, 4px, 100%)*2));
@@ -50,16 +43,6 @@ body {
     height: calc(clamp(2vw, 32px, 100%) - calc(clamp(0.25vw, 4px, 100%)*2));
     image-rendering: pixelated;
     padding: clamp(0.25vw, 4px, 100%);
-}
-
-.box {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    background-color: rgba(63, 63, 63, 1);
-    margin: 0px 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(384px, 24vw, 24vw))), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(384px, 24vw, 24vw)))) 0px;
-    width: clamp(24vw, 384px, 100%);
-    height: clamp(384px, 24vw, 24vw);
 }
 
 .zoomin-button {

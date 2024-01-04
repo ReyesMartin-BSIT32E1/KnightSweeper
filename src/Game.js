@@ -2,7 +2,7 @@ import './Game.css'
 import './Styles.css'
 import React, { useRef, useState, useEffect} from 'react';
 import ScrollContainer from 'react-indiana-drag-scroll'
-import {MobileView} from 'react-device-detect';
+import {MobileView, isMobile} from 'react-device-detect';
 
 export default function Game({ onBack }) {
     const [board, setBoard] = useState(() => Array.from({ length: 1 }, () => Array.from({ length: 1 }, () => ({isMine: false, isCleared: false, isFlagged: false, isExit: false, number: ""}))));
@@ -198,7 +198,7 @@ export default function Game({ onBack }) {
         }
     }
 
-    const ChangeZoom = (operation) => {
+    const ChangeZoom = (operation, e) => {
         switch (operation) {
             case "plus":
                 setZoom(zoom === 4 ? zoom : zoom + 1);
@@ -207,10 +207,12 @@ export default function Game({ onBack }) {
                 setZoom(zoom === 1 ? zoom : zoom - 1);
                 break;
         }
+        e.currentTarget.blur()
     }
 
-    const ToggleIndicator = () => {
+    const ToggleIndicator = (e) => {
         setIndicator(indicator ? false : true);
+        e.currentTarget.blur()
     }
 
     const BackgroundColor = () => {
@@ -492,7 +494,12 @@ export default function Game({ onBack }) {
         }}>
         <div id='temporary-screen'>Click to Start</div>
         <h1 id='knightsweeper'></h1>
-        <div className='stats'>
+        <div className='stats' style={{
+            display: 'grid',
+            gridTemplateColumns: `calc(clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) ' + 'calc(clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%) / 2 - clamp(10vw, 160px, 100%) / 2) ' + 'clamp(2vw, 32px, 100%) ' + 'clamp(3vw, 48px, 100%) ' + 'clamp(2vw, 32px, 100%) ' + 'clamp(3vw, 48px, 100%)`,
+            width: `clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%)`,
+            height: 'clamp(2vw, 32px, 100%)'
+        }}>
             <div className='stat-text'>Level: {currentLevel}</div>
             <div className='stat-text'>Moves: {moveCounter}</div>
             <img src='./sprites/tileUncleared.png' className='stat-icon'/>
@@ -500,7 +507,15 @@ export default function Game({ onBack }) {
             <img src='./sprites/bomb.png' className='stat-icon'/>
             <div className='stat-text'>: {CheckUnflagged()}</div>
         </div>
-        <ScrollContainer className="box" innerRef={container}>
+        <ScrollContainer className="box" innerRef={container} style={{
+            display: 'grid',
+            justifyItems: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(63, 63, 63, 1)',
+            margin: `0px 0px clamp(32px, calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(${isMobile ? 384 : 512}px, ${isMobile ? 24 : 32}px, ${isMobile ? 24 : 32}px))), calc(100vh - (clamp(1vw, 16px, 100%) * 2 + clamp(64px, 4vw, 4vw) + clamp(2vw, 32px, 100%) + clamp(${isMobile ? 384 : 512}px, ${isMobile ? 24 : 32}px, ${isMobile ? 24 : 32}px)))) 0px`,
+            width: `clamp(${isMobile ? 24 : 32}vw, ${isMobile ? 384 : 512}px, 100%)`,
+            height: `clamp(${isMobile ? 384 : 512}px, ${isMobile ? 24 : 32}px, ${isMobile ? 24 : 32}px)`
+        }}>
             <div className="board" style={{
                 position: 'relative',
                 display: 'grid',
@@ -553,9 +568,9 @@ export default function Game({ onBack }) {
             </div>
         </ScrollContainer>
         <button className='back-button' onClick={onBack}>◀</button>
-        <button className='zoomin-button' onClick={() => ChangeZoom('plus')}>+</button>
-        <button className='zoomout-button' onClick={() => ChangeZoom('minus')}>-</button>
-        <button className='indicator-button' onClick={() => ToggleIndicator()}>👁</button>
+        <button className='zoomin-button' onClick={(e) => ChangeZoom('plus', e)}>+</button>
+        <button className='zoomout-button' onClick={(e) => ChangeZoom('minus', e)}>-</button>
+        <button className='indicator-button' onClick={(e) => ToggleIndicator(e)}>👁</button>
         <MobileView>
         <div className="keypad-left">
             <div></div>
