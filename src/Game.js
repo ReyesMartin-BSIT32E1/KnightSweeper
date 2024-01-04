@@ -573,7 +573,7 @@ export default function Game({ onBack }) {
             <button className="key" onClick={() => PlayerMovement('up')}>▲</button>
             <div></div>
             <button className="key" onClick={() => PlayerMovement('left')}>◀</button>
-            <button className="key" onMouseDown={() => setHide(true)} onMouseUp={() => setHide(false)}>●</button>
+            <button className="key" onClick={() => ToggleHide()}>●</button>
             <button className="key" onClick={() => PlayerMovement('right')}>▶</button>
             <div></div>
             <button className="key" onClick={() => PlayerMovement('down')}>▼</button>
