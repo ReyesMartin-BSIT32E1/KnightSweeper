@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/KnightSweeper/static/css/main.40369a97.css",
-    "main.js": "/KnightSweeper/static/js/main.4d5fc493.js",
+    "main.js": "/KnightSweeper/static/js/main.47bf896f.js",
     "static/media/Play.png": "/KnightSweeper/static/media/Play.398d6fd820ba5638e42b.png",
     "static/media/Credits.png": "/KnightSweeper/static/media/Credits.b90b56023a75eb20b76b.png",
     "static/media/instructions.png": "/KnightSweeper/static/media/instructions.7f01a716dafe05cb0eed.png",
@@ -9,10 +9,10 @@
     "static/media/Logo.png": "/KnightSweeper/static/media/Logo.e0ddd1c2dbbc1ee4d050.png",
     "index.html": "/KnightSweeper/index.html",
     "main.40369a97.css.map": "/KnightSweeper/static/css/main.40369a97.css.map",
-    "main.4d5fc493.js.map": "/KnightSweeper/static/js/main.4d5fc493.js.map"
+    "main.47bf896f.js.map": "/KnightSweeper/static/js/main.47bf896f.js.map"
   },
   "entrypoints": [
     "static/css/main.40369a97.css",
-    "static/js/main.4d5fc493.js"
+    "static/js/main.47bf896f.js"
   ]
 }
