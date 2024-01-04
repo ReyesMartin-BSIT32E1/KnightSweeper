@@ -15,7 +15,7 @@ export default function Game({ onBack }) {
     const [zoom, setZoom] = useState(1);
     const [lastPosition, setLastPosition] = useState({x: 0, y: 0});
     const [indicator, setIndicator] = useState(false)
-    const[moveCounter, setMoveCounter] = useState(-1);
+    const[moveCounter, setMoveCounter] = useState(0);
 
     var temporaryScreen = document.getElementById("temporary-screen");
 
