@@ -179,13 +179,13 @@ export default function Game({ onBack }) {
     }
 
     const DrawTile = (x, y) => {
-        return board[x][y].isFlagged ? "/sprites/tileFlagged.gif" : board[x][y].isCleared ? board[x][y].isExit ? cleared ? "/sprites/exitOpen.png" : "/sprites/exitClosed.png" : `/sprites/tile${board[x][y].number}.png` : "/sprites/tileUncleared.png";
+        return board[x][y].isFlagged ? "./sprites/tileFlagged.gif" : board[x][y].isCleared ? board[x][y].isExit ? cleared ? "./sprites/exitOpen.png" : "./sprites/exitClosed.png" : `./sprites/tile${board[x][y].number}.png` : "./sprites/tileUncleared.png";
     }
 
     const DrawKnight = () => {
         player.facing = player.lastDirection === "left" ? "left" : player.lastDirection === "right" ? "right" : player.facing;
-        if (player.hovering) return player.facing === "left" ? "/sprites/HoverL.gif" : "/sprites/HoverR.gif";
-        return player.facing === "left" ? "/sprites/KnightL.gif" : "/sprites/KnightR.gif";
+        if (player.hovering) return player.facing === "left" ? "./sprites/HoverL.gif" : "./sprites/HoverR.gif";
+        return player.facing === "left" ? "./sprites/KnightL.gif" : "./sprites/KnightR.gif";
     }
 
     const CenterCamera = () => {
